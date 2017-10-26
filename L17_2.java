@@ -4,6 +4,8 @@ public class L17_2{
       System.out.println(division(Integer.parseInt(args[0]), Integer.parseInt(args[1]))); 
     }catch(NumberFormatException e){
       System.out.println("数字以外が入力されました");
+    }catch(ArrayIndexOutOfBoundsException e){
+      System.out.println("数字を入力してください");
     }
   }
   static int division(int divided, int divisor){
