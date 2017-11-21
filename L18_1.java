@@ -2,20 +2,31 @@ import java.io.*;
 import java.util.Scanner;
 
 class L18_1{
-  void dataSum() throws IOException{
-    Scanner sc = new Scanner(new BufferedReader(new FileReader("seiseki.txt")));
+  void dataSum(String f) throws IOException{
+    BufferedReader din = new LineNumberReader(new FileReader(f));
+    String s;
+    int result[] = new int[5];
     int sum = 0;
-    while(sc.hasNextInt()){
-      sum += sc.nextInt();
+    int i = 0;
+    while((s = din.readLine()) != null){
+      System.out.println(s);
+      String[] temp = s.split("\\s");  
+      result[i] = Integer.parseInt(temp[1]);
+      i++;
     }
-    sc.close();
-    System.out.println(sum);
+    din.close();
+    for(int j = 0; j < 5; j++)
+      sum += result[j];
+    System.out.println("合計 " + sum);
+    for(int k = 0; k < 5; k++)
+      System.out.print(result[k] + " ");
+    System.out.println();
   }
 
   public static void main(String[] args){
     L18_1 r = new L18_1();
     try{
-      r.dataSum();
+      r.dataSum(args[0]);
     }catch(IOException error){
       System.out.println("IOエラー発生");
     }
