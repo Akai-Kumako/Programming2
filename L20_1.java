@@ -20,12 +20,15 @@ class L20_1 extends JPanel{
     pA.setBackground(colors[backGround[0]]);
     pA.add(button1);
     button1.setBackground(colors[backGround[1]]);
+    button1.setFont(new Font("Serif", Font.PLAIN, 15));
     button1.setOpaque(true);
     pA.add(button2);
     button2.setBackground(colors[backGround[1]]);
+    button2.setFont(new Font("Serif", Font.PLAIN, 15));
     button2.setOpaque(true);
     pA.add(button3);
     button3.setBackground(colors[backGround[1]]);
+    button3.setFont(new Font("Serif", Font.PLAIN, 15));
     button3.setOpaque(true);
 
     JPanel pB = new JPanel();
@@ -41,12 +44,15 @@ class L20_1 extends JPanel{
     pC.setBackground(colors[backGround[3]]);
     pC.add(button6);
     button6.setBackground(colors[backGround[4]]);
+    button6.setFont(new Font("Hiragino Kaku Gothic Pro", Font.PLAIN, 15));
     button6.setOpaque(true);
     pC.add(button7);
     button7.setBackground(colors[backGround[4]]);
+    button7.setFont(new Font("Hiragino Kaku Gothic Pro", Font.PLAIN, 15));
     button7.setOpaque(true);    
     pC.add(button8);
     button8.setBackground(colors[backGround[4]]);
+    button8.setFont(new Font("Hiragino Kaku Gothic Pro", Font.PLAIN, 15));
     button8.setOpaque(true);    
 
     JPanel p1 = new JPanel();
